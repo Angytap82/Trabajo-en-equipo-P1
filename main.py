@@ -1,7 +1,11 @@
 import csv
+from functions import * 
 
 def cargar_datos(nombre_archivo):
     lista_paises = []
+    response = validacion_archivo(nombre_archivo) 
+    if not response:
+        crear_archivo(nombre_archivo)
     try:
         with open(nombre_archivo, mode='r', encoding='utf-8') as archivo:
             lector = csv.DictReader(archivo)
@@ -32,30 +36,29 @@ def main():
         
         opcion = input("Seleccione una opción: ")
 
-        if opcion == "1":
-            paises = cargar_datos("paises.csv")
-            if paises:
-                print(f"\n¡Éxito! Se cargaron {len(paises)} países.")
-        
-        elif opcion == "2":
-            if not paises:
-                print("\n[!] Primero debes cargar los datos (Opción 1).")
-            else:
-                nombre = input("Nombre del país a buscar: ")
-                resultado = buscar_pais(paises, nombre)
-                if resultado:
-                    print(f"\nDatos de {resultado['nombre']}:")
-                    print(f"- Población: {resultado['poblacion']}")
-                    print(f"- Superficie: {resultado['superficie']} km²")
-                    print(f"- Continente: {resultado['continente']}")
+        match int(opcion):
+            case 1:
+                paises = cargar_datos("paises.csv")
+                if paises:
+                    print(f"\n¡Éxito! Se cargaron {len(paises)} países.")
+            case 2:
+                if not paises:
+                    print("\n[!] Primero debes cargar los datos (Opción 1).")
                 else:
-                    print("\nPaís no encontrado.")
-
-        elif opcion == "3":
-            print("Saliendo...")
-            break
-        else:
-            print("Opción no válida.")
+                    nombre = input("Nombre del país a buscar: ")
+                    resultado = buscar_pais(paises, nombre)
+                    if resultado:
+                        print(f"\nDatos de {resultado['nombre']}:")
+                        print(f"- Población: {resultado['poblacion']}")
+                        print(f"- Superficie: {resultado['superficie']} km²")
+                        print(f"- Continente: {resultado['continente']}")
+                    else:
+                        print("\nPaís no encontrado.")
+            case 3:
+                print("Saliendo...")
+                break
+            case 4:
+                print("Opción no válida.")
 
 if __name__ == "__main__":
     main()
