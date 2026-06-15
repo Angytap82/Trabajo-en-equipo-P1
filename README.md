@@ -248,3 +248,8 @@ proyecto/
 ## Conclusión
 
 El Sistema de Gestión de Países es una aplicación de consola que permite administrar información geográfica básica mediante registros, consultas, filtros, ordenamientos y generación de estadísticas. La utilización de archivos CSV como mecanismo de persistencia simplifica el almacenamiento de datos y facilita la portabilidad del proyecto.
+
+## Enlaces
+
+* Video: https://drive.google.com/file/d/1O1NF3KOnEjqbxebGSZe5j-t8M3OXRqTh/view?usp=sharing
+* PDF: 
