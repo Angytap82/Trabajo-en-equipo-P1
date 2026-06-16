@@ -252,4 +252,4 @@ El Sistema de Gestión de Países es una aplicación de consola que permite admi
 ## Enlaces
 
 * Video: https://drive.google.com/file/d/1O1NF3KOnEjqbxebGSZe5j-t8M3OXRqTh/view?usp=sharing
-* PDF: https://docs.google.com/document/d/1oe_ed2f7vMazRt27OU98PRRmnOTB4z5jmVfOwONbh_o/edit?usp=sharing
+* PDF: https://drive.google.com/file/d/1X4gJBIJ-USAlq4mJcB5soH0263--q8vc/view?usp=sharing
